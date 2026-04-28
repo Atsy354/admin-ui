@@ -9,7 +9,7 @@ function Exercise() {
         Post Cards
       </h1>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+  <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-5 max-w-7xl mx-auto">
         {postsData.map((post) => (
           <PostCard key={post.id} {...post} />
         ))}

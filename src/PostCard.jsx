@@ -1,34 +1,38 @@
 import React, { useState } from "react";
 
-function PostCard(props) {
-  const { id, title, body } = props;
+function PostCard({ title, body }) {
   const [clicked, setClicked] = useState(false);
 
   return (
     <div
-      className="
-        flex flex-col justify-between
-        bg-white p-5 rounded-lg shadow
-        transition-all duration-300
-        hover:scale-105
-        hover:border hover:border-black
-        hover:bg-red-100
-        h-72
-      "
+      className="h-64 flex flex-col justify-between bg-gray-100 p-5 rounded-lg 
+                 border border-gray-300 shadow-sm
+                 transition-all duration-300
+                 hover:shadow-md hover:border-black hover:bg-gray-200"
     >
-      <h2 className="text-lg font-bold text-center text-gray-800">
+      
+      {/* TITLE */}
+      <h2 className="text-lg font-semibold text-center text-gray-800 line-clamp-2">
         {title}
       </h2>
 
-      <p className="text-sm text-center text-gray-600 mt-3 flex-grow">
+      {/* BODY */}
+      <p className="text-base text-center text-gray-600 line-clamp-3 mt-2">
         {body}
       </p>
 
+      {/* BUTTON */}
       <button
         onClick={() => setClicked(true)}
-        className="mt-4 p-2 rounded-md text-white transition-all duration-300"
+        className="w-full py-2 text-sm rounded-md text-white transition-all duration-300"
         style={{
-          backgroundColor: clicked ? "#b83016" : "#6b7280"
+          backgroundColor: clicked ? "#ea3a1f" : "#6b7280",
+        }}
+        onMouseOver={(e) => {
+          if (clicked) e.currentTarget.style.backgroundColor = "#c92f18";
+        }}
+        onMouseOut={(e) => {
+          if (clicked) e.currentTarget.style.backgroundColor = "#ea3a1f";
         }}
       >
         {clicked ? "Tombol sudah diklik" : "Silakan Klik"}
