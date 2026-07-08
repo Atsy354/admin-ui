@@ -1,6 +1,8 @@
-function Logo() {
+function Logo(props) {
+  const { className = "" } = props;
+
   return (
-    <div className="flex justify-center font-poppins tracking-wide text-primary text-4xl">
+    <div className={`flex justify-center font-poppins tracking-wide text-primary text-4xl ${className}`.trim()}>
       <span className="font-bold">FINE</span>
       bank
       <span className="font-bold">.IO</span>

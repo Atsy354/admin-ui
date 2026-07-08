@@ -1,8 +1,16 @@
 function LabeledInput(props) {
-  const { label, type, id, name, placeholder } = props;
+  const {
+    label,
+    type = "text",
+    id,
+    name,
+    placeholder,
+    className = "",
+    ...rest
+  } = props;
 
   return (
-    <div className="mb-6">
+    <div className={`mb-6 ${className}`.trim()}>
       <label htmlFor={id} className="block text-sm mb-2">
         {label}
       </label>
@@ -12,6 +20,7 @@ function LabeledInput(props) {
         placeholder={placeholder}
         name={name}
         id={id}
+        {...rest}
       />
     </div>
   );
