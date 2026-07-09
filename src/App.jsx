@@ -2,6 +2,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 import SignIn from "./pages/SignIn.jsx";
 import SignUp from "./pages/SignUp.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import ErrorPage from "./pages/error.jsx";
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
     {
       path: "/register",
       element: <SignUp />,
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />,
     },
   ]);
 
