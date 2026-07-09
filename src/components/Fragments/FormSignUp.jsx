@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LabeledInput from "../Elements/LabeledInput.jsx";
 import CheckBox from "../Elements/CheckBox.jsx";
 import Button from "../Elements/Button.jsx";
@@ -75,7 +76,9 @@ function FormSignUp() {
         </Button>
       </div>
       <div className="flex justify-center">
-        <a className="text-primary text-sm font-bold">Already have an account?</a>
+        <Link to="/login" className="text-primary text-sm font-bold">
+          Already have an account?
+        </Link>
       </div>
     </>
   );

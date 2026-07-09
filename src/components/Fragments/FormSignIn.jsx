@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LabeledInput from "../Elements/LabeledInput.jsx";
 import CheckBox from "../Elements/CheckBox.jsx";
 import Button from "../Elements/Button.jsx";
@@ -61,7 +62,9 @@ function FormSignIn() {
         </Button>
       </div>
       <div className="flex justify-center">
-        <a className="text-primary text-sm font-bold">Create an account</a>
+        <Link to="/register" className="text-primary text-sm font-bold">
+          Create an account
+        </Link>
       </div>
     </>
   );
